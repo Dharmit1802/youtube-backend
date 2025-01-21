@@ -7,6 +7,7 @@ import commentRoutes from "./Routes/comments.js"
 import authRoutes from "./Routes/auth.js"
 import cookieParser from "cookie-parser";
 import path from "path"
+import cors from "cors"
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
@@ -36,6 +37,12 @@ app.use((err, req, res, next) => {
     })
 })
 
+
+server.use(
+    cors({
+        exposedHeaders: ['X-Total-Count'],
+    })
+);
 // const corsOptions = {
 //     origin: 'https://youtubeclonefronted.netlify.app/',
 //     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
