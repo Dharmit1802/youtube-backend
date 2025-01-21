@@ -50,7 +50,7 @@ const connect = () => {
     }).catch((error) => console.log(error.message))
 }
 
-app.listen(4040, () => {
+app.listen(4040 || 8080, () => {
     connect();
     console.log("Connected");
 })
