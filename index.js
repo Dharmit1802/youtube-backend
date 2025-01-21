@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 
-app.use(express.static(path.resolve(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.use("/api/auth", authRoutes)
 app.use("/api/users", userRoutes)
