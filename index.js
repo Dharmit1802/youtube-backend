@@ -38,7 +38,7 @@ app.use((err, req, res, next) => {
 })
 
 
-server.use(
+app.use(
     cors({
         exposedHeaders: ['X-Total-Count'],
     })
